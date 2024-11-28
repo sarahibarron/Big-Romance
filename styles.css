@@ -1,4 +1,4 @@
-/* General reset and base styles */
+/* General Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,71 +6,104 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #121212;
-  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #eaeaea; /* Light gray text for readability */
   line-height: 1.6;
   margin: 0;
+  padding: 0;
 }
 
+/* Link Styling */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Header styling */
+a:hover {
+  color: #ff4081;
+}
+
+/* Header Styling */
 header {
-  background-color: #1f1f1f;
-  padding: 20px 0;
+  background-color: #1a1a1a;
+  padding: 50px 20px;
   text-align: center;
+  border-bottom: 2px solid #333;
+  position: relative;
 }
 
 header h1 {
   font-size: 3rem;
-  color: #ff4081;
+  color: #ff4081; /* Accent color for brand name */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 0 20px;
 }
 
 nav ul li a {
-  color: #fff;
-  font-size: 1.2rem;
+  color: #eaeaea;
+  font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #ff4081;
 }
 
-/* Section styling */
+/* Section Styling */
 section {
-  padding: 40px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-/* Heading styles for sections */
+/* Heading Styles for Sections */
 section h2 {
-  color: #ff4081;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  color: #ff4081;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+/* Section Backgrounds */
+#about,
+#shows,
+#music,
+#merch,
+#press-kit {
+  background-color: #1a1a1a;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #333;
 }
 
 /* About Section */
 #about p {
   font-size: 1.1rem;
   color: #ddd;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  line-height: 1.7;
+  font-style: italic;
 }
 
 /* Shows Section */
@@ -80,8 +113,10 @@ section h2 {
 }
 
 #shows li {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1.3rem;
+  margin: 15px 0;
+  color: #ddd;
+  font-weight: 400;
 }
 
 /* Music Section */
@@ -90,31 +125,43 @@ section h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 #music img {
-  width: 200px;
+  width: 250px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 #music p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #music .button {
   background-color: #ff4081;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 30px;
   font-size: 1.2rem;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
 }
 
 #music .button:hover {
-  background-color: #e73370;
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
 }
 
 /* Merch Section */
@@ -123,90 +170,119 @@ section h2 {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .merch-item {
   text-align: center;
   max-width: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.merch-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .merch-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .merch-item p {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .merch-item .button {
   background-color: #ff4081;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 50px;
   font-size: 1rem;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .merch-item .button:hover {
-  background-color: #e73370;
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
 }
 
 /* Press Kit Section */
 #press-kit {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 #press-kit p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #ddd;
   margin-bottom: 20px;
+  font-style: italic;
 }
 
 #press-kit .button {
   background-color: #ff4081;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 #press-kit .button:hover {
-  background-color: #e73370;
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
 }
 
 /* Contact Section */
 #contact {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 #contact button {
   background-color: #ff4081;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 #contact button:hover {
-  background-color: #e73370;
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
-  background-color: #1f1f1f;
-  padding: 10px 0;
+  background-color: #1a1a1a;
+  padding: 20px 0;
   text-align: center;
   color: #aaa;
   font-size: 0.9rem;
+  border-top: 2px solid #333;
 }
 
 /* Mobile Responsiveness */
