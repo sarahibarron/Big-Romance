@@ -1,0 +1,227 @@
+/* General reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header styling */
+header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff4081;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+  color: #ff4081;
+}
+
+/* Section styling */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Heading styles for sections */
+section h2 {
+  color: #ff4081;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+#about p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Shows Section */
+#shows ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+#shows li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Music Section */
+#music .music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#music img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#music p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#music .button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+#music .button:hover {
+  background-color: #e73370;
+}
+
+/* Merch Section */
+#merch {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.merch-item {
+  text-align: center;
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+.merch-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.merch-item p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.merch-item .button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.merch-item .button:hover {
+  background-color: #e73370;
+}
+
+/* Press Kit Section */
+#press-kit {
+  margin-top: 40px;
+}
+
+#press-kit p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+#press-kit .button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#press-kit .button:hover {
+  background-color: #e73370;
+}
+
+/* Contact Section */
+#contact {
+  margin-top: 40px;
+}
+
+#contact button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #e73370;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1f1f1f;
+  padding: 10px 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .merch-item {
+    max-width: 100%;
+  }
+
+  .music img,
+  .merch-item img {
+    width: 80%;
+  }
+}
